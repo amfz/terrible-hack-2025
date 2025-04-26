@@ -17,6 +17,7 @@ def label_img(uri: str) -> vision.EntityAnnotation:
     # Performs label detection on the image file
     response = client.label_detection(image=image)
     labels = response.label_annotations
+    print(labels)
 
     return labels
 
