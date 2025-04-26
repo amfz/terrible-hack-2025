@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="w-3/4 mx-auto">
+      <div class="my-4">
+        <p>
+          Have you moved out? Do you miss being judged by your elders and
+          criticized for everything you do?
+        </p>
+        <p>
+          Then try ElderEyes! See your life through your elders' eyes and learn
+          how you are not living an OPTIMAL life!
+        </p>
+      </div>
+      <div class="bg-yellow-100">
+        <form action="analyze" method="POST">
+          <label form="url">Enter an image URL:</label>
+          <br />
+          <input
+            type="url"
+            name="url"
+            id="url"
+            placeholder="https://example.com"
+            pattern="https://.*[(.jpg)|(.jpeg)|(.gif)|(.png)]$"
+            size="50"
+            required
+          />
+
+          <input
+            id="updateButton"
+            type="submit"
+            value="Roast Me"
+            class="bg-blue-100"
+          />
+        </form>
+      </div>
+    </div>
+  {% endblock %}
