@@ -32,7 +32,7 @@ model = AutoModelForMaskedLM.from_pretrained("google-bert/bert-base-uncased")
 #     return list(interpretations)
 
 def interpret_labels(regular_labels:list) -> list:
-    judgy_labels = ["dishonour on your cow","wasting_money","shenanigans and gallivanting","not calling ","wasting_time", "not studying", "reading picture books", "too skinny", "not skinny enough", "visiting other people's houses and showing no manners","is that ur boyfriend/girlfriend?","Why are you out so late?", "you have to make more money", "you have to eat more healthy", ]
+    judgy_labels = ["dishonour on your cow","wasting money","shenanigans and gallivanting","not calling ","wasting time", "not studying", "reading picture books", "too skinny", "not skinny enough", "visiting other people's houses and showing no manners","is that ur boyfriend/girlfriend?","Why are you out so late?", "you have to make more money", "you have to eat more healthy", ]
     relevant_judgy_label = []
     for judgylabel in judgy_labels:
         jinputs = tokenizer(judgylabel, return_tensors="pt")
