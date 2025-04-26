@@ -21,7 +21,7 @@ def label_img(uri: str) -> vision.EntityAnnotation:
     return labels
 
 if __name__ == "__main__":
-    # test_uri = "https://researchleap.com/wp-content/uploads/2021/01/people-different-ages-demos-ss-different-age-group.jpg"
-    test_uri = "https://i.redd.it/mv72p2fef7xe1.jpeg"
-    lbls = [l.description for l in label_img(test_uri)]
+    test_uri = "https://researchleap.com/wp-content/uploads/2021/01/people-different-ages-demos-ss-different-age-group.jpg"
+    # test_uri = "https://i.redd.it/mv72p2fef7xe1.jpeg"
+    lbls = label_img(test_uri)
     print(lbls)
