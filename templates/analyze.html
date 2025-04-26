@@ -1,9 +1,11 @@
 {% extends 'base.html' %} {% block content %}
-<div id="Results" class="h-screen pt-20 pb-5 place-content-start">
-  <div id="results-contents" class="w-3/4 mx-auto">
-    <h2 class="text-4xl my-2 py-3">Results</h2>
+<div id="Results" class="max-h-60 pt-20 place-content-start">
+  <div id="results-contents" class="flex flex-col w-3/4 mx-auto">
+    <h2 class="text-4xl basis-full my-2 py-3">Results</h2>
+    <div class="flex flex-row">
+    <div class="basis-1/2">
     <p>
-      We spent a lot of time squinting at your photo at {{url_submission}} and
+      We spent a lot of time squinting at your photo and
       have determined that it means that you are:
     </p>
     <div class="my-2">
@@ -13,6 +15,11 @@
         {% endfor %}
       </ul>
     </div>
+    </div>
+    <div class="basis-1/2">
+      <img src="{{url_submission}}" class="max-h-3/4 object-contain"/>
+    </div>
+  </div>
 <!--   
     <br />
     <p>Labels:</p>
