@@ -54,7 +54,7 @@ def interpret_labels(regular_labels:list) -> list:
             # Calculate cosine similarity
             cosine_similarity = np.dot(label_embedding, regular_label_embedding) / (np.linalg.norm(label_embedding) * np.linalg.norm(regular_label_embedding))
             
-            if cosine_similarity > 0.5:
+            if cosine_similarity > 0.685:
                 relevant_judgy_label.append(judgylabel)
         final_list = list(set(relevant_judgy_label))
     return final_list

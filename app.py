@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 import vision
 import criticize
+import time
 
 app = Flask(__name__)
 
@@ -15,7 +16,9 @@ def process():
     uri = request.form["url"]
     labels = [l.description for l in vision.label_img(uri)]
     # labels = ["happiness", "friends", "food"]
+    # interps = ["wasting time", "wasting money"]
     interps = criticize.interpret_labels(labels)
+    time.sleep(5)
     return render_template(
         "analyze.html", url_submission=uri, labels=labels, interps=interps
     )
