@@ -1,38 +1,69 @@
-{% extends 'base.html' %}
-
-{% block content %}
-    <div class="w-3/4 mx-auto">
-      <div class="my-4">
-        <p>
-          Have you moved out? Do you miss being judged by your elders and
-          criticized for everything you do?
-        </p>
-        <p>
-          Then try ElderEyes! See your life through your elders' eyes and learn
-          how you are not living an OPTIMAL life!
-        </p>
+{% extends 'base.html' %} {% block content %}
+<div id="intro" class="py-4 h-screen bg-yellow-100 place-content-center">
+  <div id="intro-contents" class="w-3/4 mx-auto">
+    <p>
+      Have you moved out? Do you miss being judged by your family and criticized
+      for everything you do?
+    </p>
+    <p>
+      Then try ElderEyes! See your life through like your family does and learn
+      how you are not living an OPTIMAL life!
+    </p>
+  </div>
+</div>
+<div id="form" class="h-screen py-5 bg-purple-200 place-content-center">
+  <div id="form-contents" class="w-3/4 mx-auto">
+    <h2 class="text-4xl my-2 py-3">Try It Out</h2>
+    <form action="analyze" method="POST">
+      <label form="url">Enter an image URL:</label>
+      <br />
+      <div class="inline-block">
+      <input
+        type="url"
+        name="url"
+        id="url"
+        placeholder="https://example.com/myphoto.jpg"
+        pattern="https://.*[(.jpg)|(.jpeg)|(.gif)|(.png)]$"
+        size="50"
+        required
+        class="border-2 p-1 bg-white"
+      />
+      <!-- <br /> -->
+      <input
+        id="updateButton"
+        type="submit"
+        value="What Am I Doing Wrong?"
+        class="bg-purple-800 text-white border-2 mx-2 py-1 px-2"
+      />
       </div>
-      <div class="bg-yellow-100">
-        <form action="analyze" method="POST">
-          <label form="url">Enter an image URL:</label>
-          <br />
-          <input
-            type="url"
-            name="url"
-            id="url"
-            placeholder="https://example.com"
-            pattern="https://.*[(.jpg)|(.jpeg)|(.gif)|(.png)]$"
-            size="50"
-            required
-          />
-
-          <input
-            id="updateButton"
-            type="submit"
-            value="Roast Me"
-            class="bg-blue-100"
-          />
-        </form>
-      </div>
-    </div>
-  {% endblock %}
+    </form>
+  </div>
+</div>
+<div id="Features" class="h-screen py-5 place-content-center bg-orange-300">
+  <div id="features-contents" class="w-3/4 mx-auto">
+    <h2 class="text-4xl my-2 py-3">Coming Soon</h2>
+    <ul class="leading-9">
+      <li>
+        <span class="font-bold">👁️ Culturally-sensitive expansion packs: </span
+        >Receive more targeted criticism to better match what you grew up with!
+      </li>
+      <li>
+        <span class="font-bold">👁️ Unsolicited advice: </span>Have you tried
+        just not being depressed? What about just asking for a better job?
+      </li>
+      <li>
+        <span class="font-bold">👁️ Social media integrations: </span>Connect
+        your profiles directly to ElderEyes!
+      </li>
+      <li>
+        <span class="font-bold">👁️ Additional critique categories: </span>We're
+        ~innovating~ on seeing the worst in your photos!
+      </li>
+      <li>
+        <span class="font-bold">👁️ Automatic emails: </span>Send results along
+        to your family automatically!!
+      </li>
+    </ul>
+  </div>
+</div>
+{% endblock %}
